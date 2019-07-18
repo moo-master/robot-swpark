@@ -15,8 +15,8 @@ Sorting by price
     welcome.Open
 เข้าไปยังหน้า summer dress
     welcome.Choose menu Dresses
-    catgory.Choose Summer Dresses
+    catalog.Choose Summer Dresses
 เลือก sort ด้วย price จากแพงไปถูก
-    catgory.Sort by high price
+    catalog.Sort by high price
 ผลการทำงานต้องแสดงผลจากแพงไปถูก
-    catgory.Check sorted by high price
+    catalog.Check sorted by high price
