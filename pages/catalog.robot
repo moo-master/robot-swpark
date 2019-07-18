@@ -1,25 +1,13 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource ./pages/welcome.robot
-Resource ./pages/catalog.robot
-
-*** Variables ***
-
-*** Test Cases ***
-Sorting by price
-    เข้าเว็บไซค์
-    เข้าไปยังหน้า summer dress
-    เลือก sort ด้วย price จากแพงไปถูก
-    ผลการทำงานต้องแสดงผลจากแพงไปถูก
 
 *** Keywords ***
-เข้าเว็บไซค์
-    welcome.Open
-    Open Browser  http://automationpractice.com  browser=chrome
-เข้าไปยังหน้า summer dress
-    Click Element  //*[@id="block_top_menu"]/ul/li[2]/a
-    Click Element  //*[@id="categories_block_left"]/div/ul/li[3]/a
-เลือก sort ด้วย price จากแพงไปถูก
-    Select From List By Value  id=selectProductSort  name:asc
-ผลการทำงานต้องแสดงผลจากแพงไปถูก
+Choose Summer Dresses
+    Click Element  xpath://*[@id="categories_block_left"]/div/ul/li[3]/a
+
+Sort by high price
+    Select From List By Value   
+    ...  id:selectProductSort   price:desc
+
+Check sorted by high price
     Wait Until Element Contains  //*[@id="center_column"]/ul/li[1]/div/div[2]/div[1]/span[1]  $28.98

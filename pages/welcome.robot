@@ -2,10 +2,12 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${url}  http://automationpractice.com
-${browser} chrome
-
+${URL}  http://automationpractice.com
+${BROWSER}  chrome
 
 *** Keywords ***
 Open
-    Open Browser  ${url}  browser=${browser}
+    Open Browser  ${URL}  browser=${BROWSER}
+
+Choose menu Dresses
+    Click Element  xpath://*[@id="block_top_menu"]/ul/li[2]/a
