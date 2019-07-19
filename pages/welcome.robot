@@ -11,3 +11,6 @@ Open
 
 Choose menu Dresses
     Click Element  xpath://*[@id="block_top_menu"]/ul/li[2]/a
+
+Home
+    Go To  ${URL}
